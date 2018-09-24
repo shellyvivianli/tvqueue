@@ -15,7 +15,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 public class GreetingController {
 
     @Autowired
-    DatabaseService databaseService;
+    MemoryDatabaseService databaseService;
 
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();

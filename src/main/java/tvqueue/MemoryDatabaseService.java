@@ -6,21 +6,28 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
-public class MemoryDatabaseService implements DatabaseService {
+public class MemoryDatabaseService {
 
     private Map<Long, Greeting> greetings = new HashMap<>();
+    private Map<Integer, User> users = new HashMap<>();
 
-    @Override
     public void addGreeting(Greeting greeting) {
         greetings.put(greeting.getId(), greeting);
     }
 
-    @Override
     public Greeting getGreeting(long id) {
         if (greetings.containsKey(id))
         {
             return greetings.get(id);
         }
         return null;
+    }
+
+    public void addUser(User user) {
+        users.put(user.getId(), user);
+    }
+
+    public User getUser(int id) {
+        return users.get(id);
     }
 }

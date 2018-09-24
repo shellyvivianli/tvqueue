@@ -16,7 +16,7 @@ class Greeting {
         return id;
     }
 
-    public String getContent() {
+    String getContent() {
         return content;
     }
 }
