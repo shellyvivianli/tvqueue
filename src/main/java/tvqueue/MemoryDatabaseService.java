@@ -11,6 +11,7 @@ public class MemoryDatabaseService {
     private Map<Long, Greeting> greetings = new HashMap<>();
     private Map<Integer, User> users = new HashMap<>();
 
+
     public void addGreeting(Greeting greeting) {
         greetings.put(greeting.getId(), greeting);
     }
@@ -26,6 +27,7 @@ public class MemoryDatabaseService {
     public void addUser(User user) {
         users.put(user.getId(), user);
     }
+
 
     public User getUser(int id) {
         return users.get(id);
